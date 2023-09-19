@@ -1,12 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'componente-hijo',
-  template: '<div>Hola {{name}}</div>',
+  template: '<!-- <div>Hola {{name}}</div> --><button (click)="sayHello()">Di hola</button>',
   styleUrls: ['./componente-hijo.component.scss'],
   styles: [
     `
-      div {
+      div, button {
         background-color: lightblue;
         padding: 10px;
         text-align: center;
@@ -18,6 +18,11 @@ import { Component, Input } from '@angular/core';
   ],
 })
 export class ComponenteHijoComponent {
-  @Input()
-  name!: string;
+  /* @Input()
+  name!: string; */
+  @Output() eventoHijo = new EventEmitter();
+
+  sayHello() {
+    this.eventoHijo.emit("Hola!");
+}
 }

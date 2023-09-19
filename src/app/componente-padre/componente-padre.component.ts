@@ -4,8 +4,8 @@ import { ComponenteHijoComponent } from '../componente-hijo/componente-hijo.comp
 
 @Component({
   selector: 'componente-padre',
-  template:
-    '<br><div><h1>{{ title }}</h1></div><componente-hijo [name]="userName"></componente-hijo>',
+  templateUrl: './componente-padre.component.html',
+  template: '',
   styleUrls: ['./componente-padre.component.scss'],
   styles: [
     `
@@ -21,6 +21,11 @@ import { ComponenteHijoComponent } from '../componente-hijo/componente-hijo.comp
   ],
 })
 export class ComponentePadreComponent {
+  frase: string = '';
   userName: string = 'David';
   title: string = 'Comunicación entre Componentes mediante Property Binding';
+
+  listenerPadre(event: string): void {
+    this.frase = event;
+}
 }

@@ -1,1 +1,8 @@
 <!-- <componente-hijo [name]="userName"></componente-hijo> -->
+<br />
+<div>
+  <h1>{{ title }}</h1>
+</div>
+<!-- <componente-hijo [name]="userName"></componente-hijo> -->
+<div>{{ frase }}</div>
+<componente-hijo (eventoHijo)="listenerPadre($event)"></componente-hijo>
