@@ -1,1 +1,27 @@
+<div>
+  <h1 class="hello">
+    {{ hello | uppercase }}
+  </h1>
+</div>
+<br />
 
+<div>
+  <h1>{{ title }}</h1>
+</div>
+
+<div>
+  <div class="fs-5 fw-bold">Hola {{ userName }}!</div>
+  <div class="fs-5 fw-bold">Hola <span [innerHtml]="userName"></span>!</div>
+</div>
+
+<div>
+  <button class="btn btn-primary btn-lg" disabled="{{ changed }}">
+    Botón Desactivado
+  </button>
+  <button class="btn btn-primary btn-lg ms-3" [disabled]="changed">
+    Botón Activado
+  </button>
+  <input class="btn btn-light btn-lg ms-3" id="miInput" value="Nombre" />
+  <button class="btn btn-warning btn-lg ms-3" disabled="false"></button>
+  <button class="btn btn-warning btn-lg ms-3"></button>
+</div>

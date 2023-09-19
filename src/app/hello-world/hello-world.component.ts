@@ -2,11 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-hello-world',
-  template: `<div>
-    <h1 class="hello">
-      {{ hello | uppercase }}
-    </h1>
-  </div>`,
+  templateUrl: './hello-world.component.html',
+  template: ``,
   styles: [
     `
       div {
@@ -21,5 +18,8 @@ import { Component } from '@angular/core';
   ],
 })
 export class HelloWorldComponent {
-  public hello: string = 'Holita Mundo Majareta';
+  hello: string = 'Holita Mundo Majareta';
+  userName: string = 'CinTutuDev';
+  title: string = 'Property Binding - El binding de entrada';
+  changed: boolean = false;
 }
