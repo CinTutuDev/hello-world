@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-hello-world',
   templateUrl: './hello-world.component.html',
-  template: ``,
   styles: [
     `
       div {
